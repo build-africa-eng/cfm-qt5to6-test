@@ -16,4 +16,4 @@ Replace `QMap::keys()` with a Qt6-safe alternative.
 
 ```bash
 pip install codefixit-manager
-cfm test --rule rules/cpp/qt5to6/qt5to6.json --test-dir rules/cpp/qt5to6/tests
+cfm test --rule rules/cpp/qt5to6/qt5to6.json --test-dir rules/cpp/tests
