@@ -3,8 +3,10 @@ name: 🧪 CodeFixit Rule Test
 on:
   push:
     paths: ["rules/**", "src/**"]
+    main: ["rules/**", "src/**"]
   pull_request:
     paths: ["rules/**", "src/**"]
+    main: ["rules/**", "src/**"]
 
 jobs:
   test-cfm:
