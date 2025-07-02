@@ -2,11 +2,11 @@ name: 🧪 CodeFixit Rule Test
 
 on:
   push:
+    branches: [main]         # Only run on main branch
     paths: ["rules/**", "src/**"]
-    main: ["rules/**", "src/**"]
   pull_request:
+    branches: [main]         # Only run PRs targeting main
     paths: ["rules/**", "src/**"]
-    main: ["rules/**", "src/**"]
 
 jobs:
   test-cfm:
