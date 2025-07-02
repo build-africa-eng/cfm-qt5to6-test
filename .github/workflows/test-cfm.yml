@@ -1,0 +1,27 @@
+name: 🧪 CodeFixit Rule Test
+
+on:
+  push:
+    paths: ["rules/**", "src/**"]
+  pull_request:
+    paths: ["rules/**", "src/**"]
+
+jobs:
+  test-cfm:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install CodeFixit Manager
+        run: |
+          pip install codefixit-manager
+
+      - name: Run test on sample file
+        run: |
+          cfm test --rule rules/cpp/qt5to6/qt5to6.json --test-dir rules/cpp/qt5to6/tests
