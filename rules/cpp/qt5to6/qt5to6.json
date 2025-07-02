@@ -1,0 +1,7 @@
+[
+  {
+    "description": "Replace QMap::keys() with comment suggesting Qt6 alternative",
+    "match": "map.keys()",
+    "replace": "/* Qt6: consider using QMap::keyValueBegin() */ map.keys()"
+  }
+]
